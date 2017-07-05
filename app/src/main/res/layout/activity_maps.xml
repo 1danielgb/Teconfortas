@@ -1,0 +1,70 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="gomez.alejandro.teconfortas.MapsActivity" />
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="actualizar_sitios_cerca"
+            android:id="@+id/btncal"
+            android:onClick="calificar"
+            android:background="#337AB7"
+            android:textColor="#333333"
+            android:typeface="normal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/btnabrir"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_margin="0dp"
+            android:src="@drawable/menu"
+            android:background="#337AB7" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="295dp"
+            android:layout_height="200dp"
+            android:src="@drawable/navheader"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:padding="35dp" />
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#eeeeee"
+            android:choiceMode="singleChoice"
+            android:divider="#DFDEDD"
+            android:dividerHeight="3dp"
+            />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
